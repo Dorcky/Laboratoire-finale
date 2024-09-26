@@ -1,0 +1,168 @@
+/* Styles de base */
+.carousel-container {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: auto;
+}
+
+.specials {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 200px;
+    height: 400px;
+    max-width: 300px;
+}
+
+.specials h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.specials .highlight {
+    color: rgb(154, 142, 35);
+}
+
+.specials p {
+    margin-bottom: 20px;
+}
+
+.specials-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;  
+}
+
+.specials-button:hover {
+    background-color: darkblue;
+}
+
+.carousel {
+    flex: 6;
+    position: relative;
+    height: 400px;
+    max-width: 300px;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Tablettes */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .specials {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .carousel {
+        max-width: 90%;
+        height: auto;
+        margin-left: 0;
+        aspect-ratio: 3 / 4; /* Modifié pour un ratio plus vertical */
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Assure que toute l'image est visible */
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .carousel-container {
+        margin-top: 60px;
+    }
+
+    .specials {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .specials h2 {
+        font-size: 1.2rem;
+    }
+
+    .specials-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        max-width: 95%; /* Utilise presque toute la largeur de l'écran */
+        aspect-ratio: 3 / 4; /* Maintient un ratio vertical pour les images */
+        height: 70vh; /* Utilise 70% de la hauteur de la fenêtre */
+        max-height: 500px; /* Limite la hauteur maximale */
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Assure que toute l'image est visible */
+    }
+
+    .carousel-prev, .carousel-next {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

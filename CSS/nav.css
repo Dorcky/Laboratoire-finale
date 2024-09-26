@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.header {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: #fefefe;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1010px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+
+
+.nav-list li {
+  margin-left: 1.5rem;
+}
+
+.nav-list a {
+  color: #fefefe;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #971717;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fefefe;
+  margin: 2px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem 0;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .nav.active {
+      display: block;
+  }
+
+  .nav-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-list li {
+      margin: 0.5rem 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  /* Animation pour le hamburger */
+  .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

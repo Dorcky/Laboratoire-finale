@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px; /* Remplace les marges gauche et droite par un padding */
+}
+
+#footer-placeholder {
+    flex-shrink: 0;
+}
+
+#header-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Tablettes */
+@media (max-width: 768px) {
+    body {
+        padding: 0 30px; /* Réduit le padding sur les côtés */
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    body {
+        padding: 0 15px; /* Réduit encore plus le padding sur les côtés */
+    }
+
+    #header-placeholder {
+        position: relative; /* Change la position de l'en-tête pour les petits écrans */
+    }
+} 

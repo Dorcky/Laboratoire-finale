@@ -1,0 +1,49 @@
+/* CSS/catalogue.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+}
+
+.container {
+    display: grid; /* Utilisation de Grid pour créer une mise en page en colonnes */
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px; /* Espacement autour du conteneur */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Espacement intérieur */
+}
+
+.product-image {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour conserver le ratio */
+}
+
+h2 {
+    font-size: 18px; /* Taille de police pour le titre */
+    margin: 10px 0; /* Marge autour du titre */
+}
+
+.card p {
+    margin: 5px 0; /* Marge autour des paragraphes */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+    }
+}

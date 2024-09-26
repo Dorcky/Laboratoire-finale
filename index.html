@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/carousel.css">
+    <link rel="stylesheet" href="CSS/infos.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/inactive.css">
+    <link rel="stylesheet" href="CSS/catalogue-section.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Ma Page</title>  
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="carousel-container">
+        <div class="specials">
+            <h2><span class="highlight">Spéciaux</span> de la semaine</h2>
+            <p>Toujours les spéciaux</p>
+            <a href="speciaux.html" class="specials-button disabled">Voir les spéciaux!</a>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="assets/la meduse.png" alt="La méduse">
+                <img src="assets/parfois les lacs brulent.png" alt="Parfois les lacs brûlent">
+                <img src="assets/aventurosaure.jpg" alt="Aventurosaure">
+            </div>
+            <button class="carousel-prev">&lt;</button>
+            <button class="carousel-next">&gt;</button>
+        </div>
+    </div>
+
+    <div class="info-columns">
+        <div class="column">
+            <div class="content">
+                <div class="icon-bg"><i class="fas fa-desktop"></i></div>
+                <h3>Votre compte</h3>
+                <p>Se connecter à votre compte</p>
+            </div>
+            <a href="connexion.html" class="action-button">Connexion</a>
+        </div>
+        <div class="column">
+            <div class="content">
+                <div class="icon-bg"><i class="fas fa-search"></i></div>
+                <h3>Chercher</h3>
+                <p>Chercher dans notre catalogue</p>
+            </div>
+            <a href="resultats_recherche.html" class="action-button">Recherche</a>
+        </div>
+        <div class="column">
+            <div class="content">
+                <div class="icon-bg"><i class="fas fa-address-book"></i></div>
+                <h3>Contacts</h3>
+                <p>Qui sommes-nous</p>
+            </div>
+            <a href="contacts.html" class="action-button">Contacts</a>
+        </div>
+    </div>
+
+    <div class="catalogue-section">
+        <div class="image-column">
+            <img src="assets/catalogue.jpg" alt="catalogue">
+        </div>
+        <div class="content-column">
+            <h2>Accéder au catalogue</h2>
+            <p>Accédez au catalogue afin de voir nos meilleurs livres</p>
+            <a href="catalogue.html" class="catalogue-button">> Connecter au catalogue</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="JS/loadFooter.js"></script>
+    <script src="JS/nav.js"></script>
+    <script src="JS/carousel.js"></script>
+    <script src="JS/footer.js"></script>
+    <script src="JS/connexion.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>

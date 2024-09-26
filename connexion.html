@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/connexion.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/inactive.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="login-container">
+        <h1>Se connecter à votre compte</h1>
+        <form id="login-form">
+            <div class="input-container">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="email" name="email" placeholder="Courriel" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            </div>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+            <button type="submit">Connexion</button>
+        </form>
+        <p>Vous n'avez pas de compte? <a href="creer_compte.html">S'inscrire</a></p>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="JS/connexion.js"></script>
+    <script src="JS/nav.js"></script>
+    <script src="JS/footer.js"></script>
+    <script src="JS/loadFooter.js"></script>
+
+</body>
+</html>

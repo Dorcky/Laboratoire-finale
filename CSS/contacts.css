@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+html, body {
+    height: 100%; /* Assure que le body prend toute la hauteur */
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    flex-direction: column; /* Organise les enfants en colonne */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3a93, #3a34b7);
+    color: #fff;
+    display: flex; 
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;   
+}
+
+
+#footer-placeholder {
+    margin-top: auto; /* Pousse le footer vers le bas */
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;   
+}
+
+h1 a:hover {
+    color: #ffd700;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    width: calc(25% - 1rem);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Légère augmentation pour un effet subtil */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid #fff;
+}
+
+.image-container:hover {
+    transform: rotate(360deg);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre tout l'espace */
+}
+
+h2 {
+    font-size: 1rem; /* Taille de police pour le nom */
+    margin-bottom: 0.5rem; /* Espace sous le nom */
+}
+
+p {
+    font-size: 0.9rem; /* Taille de police pour le titre */
+    margin-bottom: 0.5rem; /* Espace sous le titre */
+}
+
+.contact-icons {
+    display: flex; /* Utilisation de flexbox pour les icônes de contact */
+    justify-content: center; /* Centre les icônes horizontalement */
+    gap: 1rem; /* Espace entre les icônes */
+}
+
+.contact-icons a {
+    color: #fff; /* Couleur des icônes */
+    font-size: 1.2rem; /* Taille des icônes */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animation au survol */
+}
+
+.contact-icons a:hover {
+    color: #ffd700; /* Couleur au survol */
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
+/* Animation d'apparition pour les membres de l'équipe */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Application de l'animation à chaque membre de l'équipe */
+.team-member {
+   animation-name : fadeIn ;
+   animation-duration : .5s ;
+   animation-fill-mode : forwards ;
+   opacity : .5 ; 
+}
+
+.team-member:nth-child(1) { animation-delay: 0.1s; }
+.team-member:nth-child(2) { animation-delay: 0.3s; }
+.team-member:nth-child(3) { animation-delay: 0.5s; }
+.team-member:nth-child(4) { animation-delay: 0.7s; }
+
+/* Responsive design */
+@media (max-width: 1024px) {
+   .team-member {
+       width : calc(50% - .5rem); /* Ajustement pour les tablettes */
+   }
+}
+
+@media (max-width :600px) {
+   .team-member {
+       width :100%; /* Pleine largeur sur mobile */
+   }
+}
