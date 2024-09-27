@@ -7,11 +7,12 @@ body {
     background-color: #f0f4f8;
 }
 
-.container {
+.catalogue-container {
     display: grid; /* Utilisation de Grid pour créer une mise en page en colonnes */
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+    grid-template-columns: repeat(2, 1fr); /* Trois colonnes de largeur égale */
     gap: 20px; /* Espacement entre les cartes */
     padding: 20px; /* Espacement autour du conteneur */
+    margin-top: 100px;
 }
 
 .card {
@@ -37,13 +38,13 @@ h2 {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .container {
+    .catalogue-container {
         grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans plus petits */
     }
 }
 
 @media (max-width: 480px) {
-    .container {
+    .catalogue-container {
         grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
     }
 }

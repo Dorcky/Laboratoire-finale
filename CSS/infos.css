@@ -1,4 +1,21 @@
 /* Styles par défaut pour les grands écrans */
+html, body {
+    height: 100%; /* Assurez-vous que le body remplit la hauteur de la fenêtre */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-placeholder {
+    margin-top: auto; /* Pousse le footer vers le bas */
+}
+
+
 .info-columns {
     display: flex;
     justify-content: space-between;

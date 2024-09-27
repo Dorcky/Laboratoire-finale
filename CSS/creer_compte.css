@@ -1,7 +1,17 @@
 /* CSS/inscription.css */
+html, body {
+    height: 100%; /* Assurez-vous que le body remplit la hauteur de la fenêtre */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+
+#footer-placeholder {
+    margin-top: auto; /* Pousse le footer vers le bas */
+}
 
 body {
     font-family: 'Arial', sans-serif;
+    flex-direction: column;
     background-color: #f0f4f8;
     margin: 0;
     padding: 0;
@@ -19,6 +29,8 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 20px;
+    margin-top: 500px;
+    margin-bottom: 50px;
 }
 
 h1 {

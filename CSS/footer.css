@@ -9,6 +9,7 @@
     height: 100px;
     width: 100vw; /* Utilise la largeur totale de la fenêtre */
     margin-left: calc(-50vw + 50%); /* Compense les marges du body */
+    
 }
 
 .footer-content {

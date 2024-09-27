@@ -10,11 +10,11 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 30px;
 }
 
-.container {
+.product-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -58,13 +58,13 @@ p {
 
 /* Responsive design */
 @media (max-width: 1024px) {
-    .container {
+    .product-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .container {
+    .product-container {
         grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
     }
 }
