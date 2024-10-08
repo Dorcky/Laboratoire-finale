@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document chargé');
 
-    const users = [
-        { firstName: 'Admin', lastName: 'User', username: 'admin@example.com', password: 'admin' }
-    ];
+    // On récupère les utilisateurs du localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // On ajoute le compte admin par défaut
+    const admin = { email: 'admin@example.com', password: 'admin' };
+    if (!users.some(u => u.email === admin.email)) {
+        users.push(admin); // On ajoute l'admin s'il n'est pas déjà présent
+        localStorage.setItem('users', JSON.stringify(users));
+    }
 
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
@@ -14,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.toLowerCase();
             const password = document.getElementById('password').value;
 
-            const user = users.find(u => u.username === email && u.password === password);
+            // On cherche un utilisateur avec l'email et le mot de passe fournis
+            const user = users.find(u => u.email === email && u.password === password);
             console.log(`Tentative de connexion avec: ${email}`);
 
             if (user) {
-                console.log(`Connexion réussie pour: ${user.username}`);
+                console.log(`Connexion réussie pour: ${user.email}`);
                 sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('user', JSON.stringify(user));
 
                 activateNavLinks();
                 activateButtons();
@@ -32,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Vérifie si l'utilisateur est déjà connecté
     const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
     console.log(`État de connexion: ${isLoggedIn}`);
     if (isLoggedIn) {
@@ -80,11 +89,4 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.pointerEvents = 'none';
         });
     }
-
-    // Désactiver les liens de navigation au chargement
-    const navLinks = document.querySelectorAll('.nav a');
-    navLinks.forEach(link => {
-        link.classList.add('disabled'); // Ajoute la classe disabled
-        console.log(`Lien désactivé: ${link.innerText}`);
-    });
 });

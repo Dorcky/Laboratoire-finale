@@ -2,6 +2,8 @@
 html, body {
     height: 100%; /* Assurez-vous que le body remplit la hauteur de la fenêtre */
     margin: 0; /* Supprimer les marges par défaut */
+    flex-direction: column;
+    display: flex;
 }
 
 
@@ -9,13 +11,15 @@ html, body {
     margin-top: auto; /* Pousse le footer vers le bas */
 }
 
+.footer-content {
+    text-align: center;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    flex-direction: column;
+    font-family: 'Arial', sans-serif;    
     background-color: #f0f4f8;
     margin: 0;
-    padding: 0;
-    display: flex;
+    padding: 0;   
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -29,7 +33,7 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 20px;
-    margin-top: 500px;
+    margin-top: 200px;
     margin-bottom: 50px;
 }
 
