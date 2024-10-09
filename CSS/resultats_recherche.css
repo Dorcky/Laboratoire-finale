@@ -55,22 +55,46 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Ajusté l'espacement */
-    text-align: center; /* Centrer le texte */
-}
+    display: flex;
+    flex-direction: column; /* Alignement des éléments de haut en bas */
+    height: 100%; /* Remplir la hauteur de la carte */
+    overflow: hidden; /* Éviter le dépassement de contenu */
+    margin-top: 30px;
+}; /* Centrer le texte */
+
 
 .image-container {
     margin-bottom: 10px; /* Espace entre l'image et le titre */
 }
 
 .product-image {
+    margin-top: 10px;
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .title-container {
     margin: 10px 0; /* Espace autour du titre */
+   text-align: center; 
 }
+
+.link-container {
+    display: flex; /* Utilisation de flexbox pour centrer l'élément */
+    justify-content: center; /* Centrer horizontalement */
+    margin-top: 10px; /* Espacement au-dessus du lien */
+    margin-bottom: 30px;
+}
+
+.link-container a {
+    color: #007BFF; /* Couleur bleue pour le lien */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 5px 10px; /* Un peu de padding pour l'espacement autour du lien */
+    border: 1px solid #007BFF; /* Bordure autour du lien */
+    border-radius: 5px; /* Coins arrondis */
+    display: inline-block; /* Pour que le padding fonctionne correctement */
+}
+
 
 .link-container a {
     color: #007BFF; /* Couleur bleue pour le lien */

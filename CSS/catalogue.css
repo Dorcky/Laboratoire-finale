@@ -9,7 +9,7 @@ body {
 
 .catalogue-container {
     display: grid; /* Utilisation de Grid pour créer une mise en page en colonnes */
-    grid-template-columns: repeat(2, 1fr); /* Trois colonnes de largeur égale */
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
     gap: 20px; /* Espacement entre les cartes */
     padding: 20px; /* Espacement autour du conteneur */
     margin-top: 100px;
@@ -19,21 +19,35 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Espacement intérieur */
+    display: flex;
+    flex-direction: column; /* Alignement des éléments de haut en bas */
+    height: 100%; /* Remplir la hauteur de la carte */
+    overflow: hidden; /* Éviter le dépassement de contenu */
 }
 
 .product-image {
     width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* Hauteur automatique pour conserver le ratio */
+    height: 100%; /* Hauteur automatique pour ajuster l'image proportionnellement */
+    object-fit: cover; /* Remplir la zone d'image sans déformer */
+}
+
+.text-box {
+    padding: 20px; /* Espacement autour du texte */
+    flex-grow: 1; /* Laisse l'espace restant pour le texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sépare le titre et le texte pour un meilleur espacement */
 }
 
 h2 {
     font-size: 18px; /* Taille de police pour le titre */
-    margin: 10px 0; /* Marge autour du titre */
+    margin: 0 0 10px 0; /* Marge en bas du titre */
+    color: #333;
 }
 
 .card p {
     margin: 5px 0; /* Marge autour des paragraphes */
+    color: #666;
 }
 
 /* Responsive design */
