@@ -1,18 +1,29 @@
 /* CSS/inscription.css */
+
 html, body {
     height: 100%; /* Assurez-vous que le body remplit la hauteur de la fenêtre */
     margin: 0; /* Supprimer les marges par défaut */
-    flex-direction: column;
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 
 #footer-placeholder {
     margin-top: auto; /* Pousse le footer vers le bas */
+    display: block;
 }
 
-.footer-content {
-    text-align: center;
+.stunning-footer {
+    width: 100%; /* Assure que le footer occupe la largeur totale */
+    text-align: center; /* S'assure que le texte et les éléments du footer sont centrés */
+}
+
+.scroll-to-top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -20,8 +31,6 @@ body {
     background-color: #f0f4f8;
     margin: 0;
     padding: 0;   
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
 
@@ -31,15 +40,17 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     width: 100%;
-    max-width: 400px;
-    margin: 20px;
-    margin-top: 200px;
+    max-width: 400px; /* Maintien la largeur maximale à 400px */
+    min-width: 280px; /* Assure que le formulaire s'adapte même aux très petits écrans */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    margin-top: 700px; /* Décale le formulaire vers le bas sur les grands écrans */
     margin-bottom: 50px;
 }
 
 h1 {
     color: #007BFF;
-    font-size: 24px;
+    font-size: 2.5rem; /* Taille flexible pour une meilleure lisibilité */
     margin-bottom: 30px;
     text-align: center;
 }
@@ -62,10 +73,10 @@ input[type="email"],
 input[type="password"],
 input[type="tel"] {
     width: 100%;
-    padding: 12px 40px 12px 35px;
+    padding: 12px 40px 12px 35px; /* Ajusté pour l'icône */
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 1rem; /* Unité relative pour une meilleure adaptation */
     transition: border-color 0.3s ease;
     box-sizing: border-box;
 }
@@ -83,7 +94,7 @@ button {
     color: white;
     border-radius: 5px;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
@@ -93,15 +104,42 @@ button:hover {
     background-color: #0056b3;
 }
 
-@media (max-width: 480px) {
+/* MEDIA QUERIES - responsive design */
+
+@media (max-width: 768px) {
     .signup-container {
-        padding: 20px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Réduit la taille du titre pour les écrans plus petits */
     }
 
     input[type="text"],
     input[type="email"],
     input[type="password"],
     input[type="tel"] {
-        font-size: 16px; /* Augmente la taille de la police pour les petits écrans */
+        font-size: 0.875rem; /* Réduit légèrement la taille de police sur petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px; /* Réduit le padding pour les petits écrans */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Encore plus petit pour une meilleure lisibilité sur très petits écrans */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        font-size: 1rem; /* Taille de police optimisée pour les petits écrans */
+    }
+
+    button {
+        font-size: 0.875rem; /* Réduit légèrement la taille du bouton */
     }
 }
