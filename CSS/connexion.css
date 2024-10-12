@@ -44,7 +44,7 @@ body {
     margin: auto;
     box-sizing: border-box;
     min-width: 280px; /* Assure une largeur minimum sur petits écrans */
-    margin-top: 400px;
+    margin-top: 200px;
     margin-bottom: 50px;
 }
 

@@ -44,7 +44,7 @@ body {
     min-width: 280px; /* Assure que le formulaire s'adapte même aux très petits écrans */
     box-sizing: border-box;
     margin: 0 auto; /* Centrer le formulaire horizontalement */
-    margin-top: 700px; /* Décale le formulaire vers le bas sur les grands écrans */
+    margin-top: 200px; /* Décale le formulaire vers le bas sur les grands écrans */
     margin-bottom: 50px;
 }
 
