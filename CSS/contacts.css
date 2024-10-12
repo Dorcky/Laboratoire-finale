@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
 html, body {
     height: 100%; /* Assure que le body prend toute la hauteur */
     display: flex; /* Utilisation de flexbox pour aligner les éléments */
@@ -15,6 +14,7 @@ body {
     color: #fff;
     display: flex; 
     align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -22,7 +22,6 @@ header {
     padding: 2rem 0;
     width: 100%;   
 }
-
 
 #footer-placeholder {
     margin-top: auto; /* Pousse le footer vers le bas */
@@ -68,6 +67,7 @@ main {
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     margin-bottom: 1rem;
     box-sizing: border-box;
+    opacity: 0; /* Commence par être invisible */
 }
 
 .team-member:hover {
@@ -82,10 +82,6 @@ main {
     overflow: hidden;
     margin: 0 auto 1rem;
     border: 3px solid #fff;
-}
-
-.image-container:hover {
-    transform: rotate(360deg);
 }
 
 .image-container img {
@@ -132,7 +128,7 @@ p {
    animation-name : fadeIn ;
    animation-duration : .5s ;
    animation-fill-mode : forwards ;
-   opacity : .5 ; 
+   opacity : 1; /* Rendre visible à la fin de l'animation */
 }
 
 .team-member:nth-child(1) { animation-delay: 0.1s; }
@@ -141,14 +137,39 @@ p {
 .team-member:nth-child(4) { animation-delay: 0.7s; }
 
 /* Responsive design */
+
+/* Tablettes en mode paysage et petits écrans (jusqu'à 1024px) */
 @media (max-width: 1024px) {
-   .team-member {
-       width : calc(50% - .5rem); /* Ajustement pour les tablettes */
-   }
+    .team-member {
+        width: calc(50% - 1rem); /* Ajustement pour les tablettes et petits écrans */
+    }
 }
 
-@media (max-width :600px) {
-   .team-member {
-       width :100%; /* Pleine largeur sur mobile */
-   }
+/* Écrans mobiles (jusqu'à 600px) */
+@media (max-width: 600px) {
+    .team-member {
+        width: 100%; /* Pleine largeur sur mobile */
+    }
+
+    .image-container {
+        width: 80px; /* Réduit la taille de l'image sur mobile */
+        height: 80px; /* Assure une image ronde sur mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Réduit la taille du texte du header */
+        margin-top: 30px;
+    }
+
+    h1 a {
+        font-size: 1.8rem; /* Taille plus petite du lien du header */
+    }
+
+    p {
+        font-size: 0.8rem; /* Réduit la taille du texte */
+    }
+    
+    .contact-icons a {
+        font-size: 1rem; /* Réduit la taille des icônes de contact */
+    }
 }
