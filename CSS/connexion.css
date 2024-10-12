@@ -2,8 +2,6 @@
 
 html, body {
     height: 100%;
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
 }
@@ -11,21 +9,32 @@ html, body {
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 #footer-placeholder {
-    margin-top: auto; /* Pousse le footer vers le bas */
-    display: block;
+    margin-top: auto;;
+    padding: 0;
 }
 
 .stunning-footer {
-    width: 100%; /* Assure que le footer occupe la largeur totale */
-    text-align: center; /* S'assure que le texte et les éléments du footer sont centrés */
-    height: 100%;
-    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: #f0f4f8;
+    flex-shrink: 0;
 }
 
 .scroll-to-top {
@@ -40,17 +49,16 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     width: 100%;
-    max-width: 400px; /* Augmenté pour s'adapter mieux aux écrans larges */
+    max-width: 400px;
     margin: auto;
     box-sizing: border-box;
-    min-width: 280px; /* Assure une largeur minimum sur petits écrans */
-    margin-top: 200px;
-    margin-bottom: 50px;
+    min-width: 280px;
+    margin-bottom: 0;
 }
 
 h1 {
     color: #007BFF;
-    font-size: 2.5rem; /* Utilisation d'une unité relative pour un meilleur redimensionnement */
+    font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -71,12 +79,12 @@ h1 {
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 12px 40px 12px 35px; /* Ajusté pour l'icône */
+    padding: 12px 40px 12px 35px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 1rem; /* Utilisation d'une taille de police relative */
+    font-size: 1rem;
     transition: border-color 0.3s ease;
-    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+    box-sizing: border-box;
 }
 
 input[type="email"]:focus,
@@ -92,7 +100,7 @@ input[type="password"]:focus {
     color: #007BFF;
     text-decoration: none;
     margin-bottom: 20px;
-    font-size: 0.875rem; /* Taille réduite mais toujours lisible */
+    font-size: 0.875rem;
 }
 
 .forgot-password:hover {
@@ -133,18 +141,18 @@ p a:hover {
 /* Responsivity pour petits écrans */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Plus petit pour petits écrans */
+        font-size: 2rem;
     }
 
     .login-container {
         padding: 20px;
-        max-width: 90%; /* Largeur flexible sur petits écrans */
+        max-width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem; /* Encore plus petit sur très petits écrans */
+        font-size: 1.5rem;
     }
 
     .login-container {
@@ -153,10 +161,10 @@ p a:hover {
 
     input[type="email"],
     input[type="password"] {
-        padding: 12px 35px 12px 30px; /* Réduit la taille des champs */
+        padding: 12px 35px 12px 30px;
     }
 
     button {
-        font-size: 0.875rem; /* Réduit légèrement la taille du bouton */
+        font-size: 0.875rem;
     }
 }

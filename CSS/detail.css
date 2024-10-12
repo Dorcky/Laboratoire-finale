@@ -11,7 +11,6 @@ body {
     align-items: center;  /* Centrer horizontalement */
     justify-content: center; /* Centrer verticalement */
     padding: 0 20px; /* Padding sur les côtés, réduit pour une meilleure réactivité */
-    text-align: center; /* Centrer le texte */
     box-sizing: border-box; /* Inclure le padding dans les dimensions */
     min-height: 100vh; /* Assurer que la hauteur minimale du body soit 100% de la fenêtre */
 }
