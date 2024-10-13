@@ -98,13 +98,17 @@ const book = books.find(b => b.code === bookId);
 
 if (book) {
     document.getElementById('book-details').innerHTML = `
-        <h2>${book.title}</h2>
-        <img src="${book.image}" alt="${book.title}">
-        <p><strong>Auteur :</strong> ${book.author}</p>
-        <p><strong>Code produit :</strong> ${book.code}</p>
-        <p><strong>Format :</strong> ${book.format}</p>
-        <p><strong>Description :</strong> ${book.description}</p>
-        <p><strong>Prix :</strong> ${book.price}</p>
+        <div class="image-box">
+            <img src="${book.image}" alt="${book.title}" class="product-image">
+        </div>
+        <div class="text-box">
+            <h2>${book.title}</h2>
+            <p><strong>Auteur :</strong> ${book.author}</p>
+            <p><strong>Code produit :</strong> ${book.code}</p>
+            <p><strong>Format :</strong> ${book.format}</p>
+            <p><strong>Description :</strong> ${book.description}</p>
+            <p><strong>Prix :</strong> ${book.price}</p>
+        </div>
     `;
 } else {
     document.getElementById('book-details').innerHTML = '<p>Livre non trouvé.</p>';

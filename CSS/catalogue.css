@@ -12,8 +12,11 @@ body {
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
     gap: 20px; /* Espacement entre les cartes */
     padding: 20px; /* Espacement autour du conteneur */
-    margin-top: 100px;
+    margin: 100px auto; /* Centrage horizontal et marge en haut */
+    width: 90%; /* Réduction de la taille globale du conteneur */
+    max-width: 1200px; /* Limite la largeur maximale du conteneur */
 }
+
 
 .card {
     background-color: #ffffff;

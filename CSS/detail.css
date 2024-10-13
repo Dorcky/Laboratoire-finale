@@ -8,11 +8,13 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centrer horizontalement */
-    justify-content: center; /* Centrer verticalement */
-    padding: 0 20px; /* Padding sur les côtés, réduit pour une meilleure réactivité */
-    box-sizing: border-box; /* Inclure le padding dans les dimensions */
-    min-height: 100vh; /* Assurer que la hauteur minimale du body soit 100% de la fenêtre */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
 }
 
 /* Footer */
@@ -23,15 +25,33 @@ body {
 
 /* Book Details Container */
 #book-details {
-    width: 100%; /* S'adapte à la largeur de l'écran */
-    max-width: 600px; /* Largeur maximale */
+    width: 100%;
+    max-width: 600px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 0 auto; /* Centrer horizontalement */
-    margin-top: 10vh; /* Utilisation de vh pour ajuster l'espacement par rapport à la hauteur de la fenêtre */
-    margin-bottom: 10vh; /* Marges variables, plus flexible */
+    margin: 100px auto 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image */
+.image-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Text Content */
+.text-box {
+    flex-grow: 1;
 }
 
 /* Title */
@@ -39,12 +59,6 @@ h2 {
     font-size: 24px;
     margin-bottom: 10px;
     padding: 0 10px;
-}
-
-/* Image */
-img {
-    max-width: 100%;
-    border-radius: 5px;
 }
 
 /* Paragraphs */
@@ -64,59 +78,59 @@ strong {
 /* Lorsque l'écran est inférieur à 1024px (Tablettes) */
 @media (max-width: 1024px) {
     body {
-        padding: 0 30px; /* Réduit les marges pour les tablettes */
+        padding: 80px 30px 0;
     }
 
     #book-details {
-        margin-top: 5vh; /* Moins d'espace au-dessus */
-        padding: 15px; /* Réduit légèrement le padding interne */
+        margin-top: 80px;
+        padding: 15px;
     }
 
     h2 {
-        font-size: 22px; /* Réduit la taille du texte */
+        font-size: 22px;
     }
 
     p {
-        font-size: 16px; /* Réduit légèrement la taille de la police */
+        font-size: 16px;
     }
 }
 
 /* Lorsque l'écran est inférieur à 768px (Smartphones) */
 @media (max-width: 768px) {
     body {
-        padding: 0 15px; /* Réduit encore plus les marges latérales pour les petits écrans */
+        padding: 60px 15px 0;
     }
 
     #book-details {
-        margin-top: 5vh; /* Moins d'espace au-dessus */
-        padding: 10px; /* Réduit encore le padding pour les petits écrans */
+        margin-top: 60px;
+        padding: 10px;
     }
 
     h2 {
-        font-size: 20px; /* Plus petite taille de texte pour les petits écrans */
+        font-size: 20px;
     }
 
     p {
-        font-size: 14px; /* Réduit encore la taille du texte */
+        font-size: 14px;
     }
 }
 
 /* Lorsque l'écran est inférieur à 480px (Très petits écrans / Mobile en mode portrait) */
 @media (max-width: 480px) {
     body {
-        padding: 0 10px; /* Réduit les marges pour les très petits écrans */
+        padding: 40px 10px 0;
     }
 
     #book-details {
-        margin-top: 40vh; /* Réduit l'espace au-dessus pour un meilleur ajustement */
+        margin-top: 40px;
         padding: 10px;
     }
 
     h2 {
-        font-size: 18px; /* Très petite taille de texte */
+        font-size: 18px;
     }
 
     p {
-        font-size: 12px; /* Très petite taille de texte pour les petits écrans */
+        font-size: 12px;
     }
 }
