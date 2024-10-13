@@ -6,7 +6,7 @@ const books = [
         format: "Papier, Epub",
         description: "Un récit sur l'absurdité de la vie et l'indifférence de l'univers.",
         price: "7,50 €",
-        image: "assets/ L'Étranger.jpg"
+        image: "assets/ L'Étranger.jpg"
     },
     {
         title: "Le Petit Prince",
