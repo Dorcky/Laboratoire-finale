@@ -10,7 +10,6 @@
 .specials {
     flex: 1;
     padding: 20px;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
