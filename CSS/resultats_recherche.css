@@ -127,9 +127,8 @@ body {
     .results-container {
         grid-template-columns: 1fr; /* Une seule colonne sur petit écran */
         gap: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        
+        width: 90%; /* Réduit la largeur pour s'adapter à l'écran */
+        margin: 0 auto 50px auto; /* Centre horizontalement avec une marge en bas */
     }
 
     #search-input {
